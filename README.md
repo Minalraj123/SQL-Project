@@ -130,8 +130,11 @@ Generate sales, order, and inventory reports using SQL queries.
 # Project Deliverables:
 
 **ER Diagram:** Visualize the schema and relationships between tables.
+
 **SQL Code:** Include table creation scripts, sample data inserts, and complex query examples.
+
 **Documentation:** Explain the schema design, use cases, and how to use the SQL queries.
+
 **Presentation:** Show a demo of SQL queries solving key business operations (e.g., retrieving sales reports, user orders).
 
 
