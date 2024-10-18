@@ -11,8 +11,8 @@ Tables may include Users, Products, Orders, Order Details, Payments, etc.
 Define the Problem Statement:
 
 The goal is to create a database that helps an e-commerce company manage its operations efficiently, providing real-time insights into sales, product availability, and customer activities.
-**2) Design Database Schema:**
 
+**2) Design Database Schema:**
 Create the following tables based on the project scope:
 
 **Users Table:**
@@ -20,23 +20,24 @@ Fields: UserID, Username, FullName, Email, Password, UserRole
 Stores information about users (customers and administrators).
 
 **Products Table:**
-Fields: ProductID, ProductName, Description, Price, StockQuantity, CategoryID
+
+**Fields:** ProductID, ProductName, Description, Price, StockQuantity, CategoryID
 Stores the product catalog, including descriptions, pricing, and stock details.
 Categories Table:
 
-Fields: CategoryID, CategoryName
+**Fields:** CategoryID, CategoryName
 Stores product categories to classify products.
 Orders Table:
 
-Fields: OrderID, UserID, OrderDate, TotalAmount, OrderStatus
+**Fields:** OrderID, UserID, OrderDate, TotalAmount, OrderStatus
 Stores details of customer orders.
 OrderDetails Table:
 
-Fields: OrderDetailID, OrderID, ProductID, Quantity, UnitPrice
+**Fields:** OrderDetailID, OrderID, ProductID, Quantity, UnitPrice
 Stores information on each product ordered in an order.
 Payments Table:
 
-Fields: PaymentID, OrderID, PaymentDate, PaymentAmount, PaymentMethod
+**Fields:** PaymentID, OrderID, PaymentDate, PaymentAmount, PaymentMethod
 Stores payment information related to orders.
 
 **3) Create Tables:**
