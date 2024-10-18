@@ -8,7 +8,7 @@ Create an E-commerce Sales Management System using SQL to manage products, custo
 Identify the entities and relationships required.
 Tables may include Users, Products, Orders, Order Details, Payments, etc.
 # Steps to Complete the Project:
-Define the Problem Statement:
+**Define the Problem Statement:**
 
 The goal is to create a database that helps an e-commerce company manage its operations efficiently, providing real-time insights into sales, product availability, and customer activities.
 
@@ -16,7 +16,7 @@ The goal is to create a database that helps an e-commerce company manage its ope
 Create the following tables based on the project scope:
 
 **Users Table:**
-Fields: UserID, Username, FullName, Email, Password, UserRole
+**Fields:** UserID, Username, FullName, Email, Password, UserRole
 Stores information about users (customers and administrators).
 
 **Products Table:**
@@ -43,7 +43,7 @@ Stores payment information related to orders.
 **3) Create Tables:**
 Example SQL schema creation for the Products table:
 
-CREATE TABLE Products (
+**CREATE TABLE Products (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(100),
     Description TEXT,
@@ -51,33 +51,33 @@ CREATE TABLE Products (
     StockQuantity INT,
     CategoryID INT,
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
-);
+);**
 
 **4) Insert Sample Data:** 
 Populate tables with sample data for testing.
-INSERT INTO Products (ProductID, ProductName, Description, Price, StockQuantity, CategoryID)
-VALUES (1, 'Laptop', 'Gaming Laptop', 1200.99, 50, 1);
+**INSERT INTO Products (ProductID, ProductName, Description, Price, StockQuantity, CategoryID)
+VALUES (1, 'Laptop', 'Gaming Laptop', 1200.99, 50, 1);**
 
 **5) Write SQL Queries:**
 Implement basic and advanced SQL queries to solve common use cases.
 # Example Queries:
-**.Retrieve all products in stock:**
+**Retrieve all products in stock:**
 
-SELECT ProductName, StockQuantity 
+**SELECT ProductName, StockQuantity 
 FROM Products 
-WHERE StockQuantity > 0;
-Calculate total sales for a product:
+WHERE StockQuantity > 0;**
+**Calculate total sales for a product:**
 
-SELECT ProductID, SUM(Quantity * UnitPrice) AS TotalSales
+**SELECT ProductID, SUM(Quantity * UnitPrice) AS TotalSales
 FROM OrderDetails
-GROUP BY ProductID;
+GROUP BY ProductID;**
 List customers who placed more than 5 orders:
 
-SELECT Username, COUNT(OrderID) AS TotalOrders
+**SELECT Username, COUNT(OrderID) AS TotalOrders
 FROM Orders 
 JOIN Users ON Orders.UserID = Users.UserID
 GROUP BY Username
-HAVING COUNT(OrderID) > 5;
+HAVING COUNT(OrderID) > 5;**
 
 **6) Database Constraints and Relationships:**
 Enforce data integrity with constraints like Primary Key, Foreign Key, and Unique.
@@ -87,31 +87,31 @@ Define relationships between tables, ensuring proper linkage between users, prod
 **7) Triggers:**
 Automatically update the stock quantity when a new order is placed.
 
-CREATE TRIGGER UpdateStock AFTER INSERT ON OrderDetails
+**CREATE TRIGGER UpdateStock AFTER INSERT ON OrderDetails
 FOR EACH ROW
 BEGIN
    UPDATE Products
    SET StockQuantity = StockQuantity - NEW.Quantity
    WHERE ProductID = NEW.ProductID;
-END;
+END;**
 
 **8) Stored Procedures:**
 Create a stored procedure to generate a sales report for a given date range.
 
-CREATE PROCEDURE SalesReport (IN startDate DATE, IN endDate DATE)
+**CREATE PROCEDURE SalesReport (IN startDate DATE, IN endDate DATE)
 BEGIN
    SELECT OrderID, TotalAmount
    FROM Orders
    WHERE OrderDate BETWEEN startDate AND endDate;
-END;
+END;**
 
 **9) Views:**
 Create a view to simplify access to customer order details.
 
-CREATE VIEW CustomerOrders AS
+**CREATE VIEW CustomerOrders AS
 SELECT Users.Username, Orders.OrderID, Orders.OrderDate, Orders.TotalAmount
 FROM Orders
-JOIN Users ON Orders.UserID = Users.UserID;
+JOIN Users ON Orders.UserID = Users.UserID;**
 
 # Project Features:
 
