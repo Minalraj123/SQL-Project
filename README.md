@@ -1,4 +1,4 @@
-**SQL project:**
+# SQL project:
 
 **Project Planning:**
 **Define the Scope:**
@@ -22,10 +22,10 @@ Set Primary and Foreign Keys:
 
 Ensure each table has a primary key for unique identification.
 Define relationships between tables using foreign keys (e.g., linking users to posts, orders to products).
-**Writing SQL Queries:**
+# Writing SQL Queries:
 **CRUD Operations:**
 
-# Implement basic SQL operations:**
+# Implement basic SQL operations:
 INSERT: Add new records (e.g., users, products).
 SELECT: Retrieve data (e.g., view user profile, post details).
 UPDATE: Modify existing records (e.g., update profile or order status).
