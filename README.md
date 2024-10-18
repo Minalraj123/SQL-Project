@@ -4,6 +4,7 @@
 **1) Define the Scope:**
 Purpose of the database (e.g., eCommerce platform, blog site, inventory management).
 Key entities and relationships (e.g., users, products, orders, comments).
+
 **2) Identify Key Tables:**
 Determine the tables needed based on the project scope.
 **Users/Profiles (e.g., usernames, emails).**
@@ -11,20 +12,20 @@ Determine the tables needed based on the project scope.
 **Transactions/Comments (e.g., order history, user comments).**
 **Categories/Tags (e.g., product categories, post tags).**
 **Database Design:**
-**3) Create Database Schema:**
 
+**3) Create Database Schema:**
 Define table structures with fields, types, and relationships.
 **Example tables:**
 USER (ID, USERNAME, PASSWORD, EMAIL)
 ORDER (ORDER_ID, USER_ID, PRODUCT_ID, ORDER_DATE)
 POST (POST_ID, USERNAME, POST_TITLE, POST_DESCRIPTION)
-**4) Set Primary and Foreign Keys:**
 
+**4) Set Primary and Foreign Keys:**
 Ensure each table has a primary key for unique identification.
 Define relationships between tables using foreign keys (e.g., linking users to posts, orders to products).
 # Writing SQL Queries:
-**5) CRUD Operations:**
 
+**5) CRUD Operations:**
 # Implement basic SQL operations:
 **INSERT:** Add new records (e.g., users, products).
 **SELECT:** Retrieve data (e.g., view user profile, post details).
