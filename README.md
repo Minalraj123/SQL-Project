@@ -61,7 +61,7 @@ VALUES (1, 'Laptop', 'Gaming Laptop', 1200.99, 50, 1);
 **5) Write SQL Queries:**
 Implement basic and advanced SQL queries to solve common use cases.
 # Example Queries:
-Retrieve all products in stock:
+**.Retrieve all products in stock:**
 
 SELECT ProductName, StockQuantity 
 FROM Products 
