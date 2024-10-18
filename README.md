@@ -55,6 +55,7 @@ Example SQL schema creation for the Products table:
 
 **4) Insert Sample Data:** 
 Populate tables with sample data for testing.
+
 **INSERT INTO Products (ProductID, ProductName, Description, Price, StockQuantity, CategoryID)
 VALUES (1, 'Laptop', 'Gaming Laptop', 1200.99, 50, 1);**
 
