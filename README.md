@@ -14,12 +14,12 @@ The goal is to create a database that helps an e-commerce company manage its ope
 **2) Design Database Schema:**
 
 Create the following tables based on the project scope:
-**Users Table:**
 
+**Users Table:**
 Fields: UserID, Username, FullName, Email, Password, UserRole
 Stores information about users (customers and administrators).
-**Products Table:**
 
+**Products Table:**
 Fields: ProductID, ProductName, Description, Price, StockQuantity, CategoryID
 Stores the product catalog, including descriptions, pricing, and stock details.
 Categories Table:
@@ -38,8 +38,8 @@ Payments Table:
 
 Fields: PaymentID, OrderID, PaymentDate, PaymentAmount, PaymentMethod
 Stores payment information related to orders.
-**3) Create Tables:**
 
+**3) Create Tables:**
 Example SQL schema creation for the Products table:
 
 CREATE TABLE Products (
@@ -51,11 +51,12 @@ CREATE TABLE Products (
     CategoryID INT,
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
+
 **4) Insert Sample Data:** 
 Populate tables with sample data for testing.
-
 INSERT INTO Products (ProductID, ProductName, Description, Price, StockQuantity, CategoryID)
 VALUES (1, 'Laptop', 'Gaming Laptop', 1200.99, 50, 1);
+
 **5) Write SQL Queries:**
 Implement basic and advanced SQL queries to solve common use cases.
 # Example Queries:
@@ -76,10 +77,12 @@ FROM Orders
 JOIN Users ON Orders.UserID = Users.UserID
 GROUP BY Username
 HAVING COUNT(OrderID) > 5;
+
 **6) Database Constraints and Relationships:**
 Enforce data integrity with constraints like Primary Key, Foreign Key, and Unique.
 Define relationships between tables, ensuring proper linkage between users, products, and orders.
 # Advanced Features:
+
 **7) Triggers:**
 Automatically update the stock quantity when a new order is placed.
 
@@ -90,6 +93,7 @@ BEGIN
    SET StockQuantity = StockQuantity - NEW.Quantity
    WHERE ProductID = NEW.ProductID;
 END;
+
 **8) Stored Procedures:**
 Create a stored procedure to generate a sales report for a given date range.
 
@@ -99,6 +103,7 @@ BEGIN
    FROM Orders
    WHERE OrderDate BETWEEN startDate AND endDate;
 END;
+
 **9) Views:**
 Create a view to simplify access to customer order details.
 
@@ -106,20 +111,23 @@ CREATE VIEW CustomerOrders AS
 SELECT Users.Username, Orders.OrderID, Orders.OrderDate, Orders.TotalAmount
 FROM Orders
 JOIN Users ON Orders.UserID = Users.UserID;
+
 # Project Features:
+
 **CRUD Operations:**
-
 Create, Read, Update, and Delete operations on products, users, and orders.
+
 **Order Management:**
-
 Track orders, update statuses (e.g., delivered, pending), and handle payments.
+
 **Inventory Control:**
-
 Automatically reduce stock when orders are placed and send alerts for low stock levels.
-**Reports:**
 
+**Reports:**
 Generate sales, order, and inventory reports using SQL queries.
+
 # Project Deliverables:
+
 **ER Diagram:** Visualize the schema and relationships between tables.
 **SQL Code:** Include table creation scripts, sample data inserts, and complex query examples.
 **Documentation:** Explain the schema design, use cases, and how to use the SQL queries.
